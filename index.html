@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Форма регистрации</title>
+</head>
+<body>
+    <div class="wrapper">
+        <form action="" id="form" name="form" novalidate>
+            <h1> Форма регистрации
+            </h1>
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text" name="username" id="username" placeholder="Введите имя" minlength="2" maxlength="20" required> 
+                    <i class='bx bxs-user'></i>
+        
+                </div>
+                <span class="error-message" id="username-error"></span>
+                <div class="input-field">
+                    <input type="email" name="email" id="email" placeholder="Введите ваш email" required>
+                    <i class='bx bxs-envelope' ></i>
+                    
+                </div>
+                <span class="error-message" id="email-error"></span>
+
+                    <div class="input-field">
+                        <input type="number" name="age" id="age" placeholder="Введите ваш возраст" min="0" required>
+                        <i class='bx bxs-calendar-edit'></i>
+                    </div>
+                    <div class="input-field gender">
+                        <p>Выберите пол:</p>
+                        <label>
+                          <input type="radio" name="gender" value="male" required>
+                          Мужской
+                        </label>
+                        
+                        <label>
+                          <input type="radio" name="gender" value="female" required>
+                          Женский
+                        </label>
+                      
+                    </div>
+
+                        <div class="input-field">
+                            <label for="profession">Выберите вашу профессию:</label>
+<select name="profession" id="profession" required>
+  <option value="" disabled selected>Выберите профессию</option>
+  <option value="doctor">Врач</option>
+  <option value="programmer">Программист</option>
+  <option value="teacher">Учитель</option>
+  <option value="designer">Дизайнер</option>
+  <option value="engineer">Инженер</option>
+  <option value="seller">Продавец</option>
+  <option value="other">Другое</option>
+</select>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" id="password" name="pswd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Пароль не может быть короче восьми символов и должен содержать хотя бы одну цифру, одну строчную и одну заглавную букву" placeholder="Введите пароль" required>
+                            <i class='bx bxs-lock-alt' ></i>
+                           
+                        </div>
+                        <span class="error-message" id="password-error"></span>
+
+            </div>
+            <label><input type="checkbox" id="checkbox">Согласие на обработку персональных данных</label>
+            <button type="submit" class="btn" id="btn" disabled>Отправить</button>
+        </div>
+        </form>
+    </div>
+    <script src="./assets/script.js"></script>s
+</body>
+
+</html>
